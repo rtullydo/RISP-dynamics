@@ -10,4 +10,4 @@ risps_from_graphs.nb contains a method for producing new RISPs from the Nevanlin
 
 [2]<https://arxiv.org/abs/1605.08707>
 
-[3]<https://arxiv.org/pdf/1803.04666>
+[3]<https://arxiv.org/abs/1803.04666>
