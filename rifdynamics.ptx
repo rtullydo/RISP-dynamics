@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <docinfo>
+        <macros>
+        \DeclareMathOperator{\RE}{Re}
+          \DeclareMathOperator{\IM}{Im}
+          \DeclareMathOperator{\ess}{ess}
+          \DeclareMathOperator{\intr}{int}
+          \DeclareMathOperator{\dist}{dist}
+          \DeclareMathOperator{\dom}{dom}
+          \DeclareMathOperator{\diag}{diag}
+          \DeclareMathOperator{\span}{span}
+          \DeclareMathOperator{\null}{null}
+          \DeclareMathOperator{\rank}{rank}
+          \DeclareMathOperator{\col}{col}
+          \DeclareMathOperator{\row}{row}
+          \DeclareMathOperator{\proj}{proj}
+          \DeclareMathOperator\re{\mathrm {Re~}}
+          \DeclareMathOperator\im{\mathrm {Im~}}
+          %\newcommand\half{\tfrac 12}
+          \newcommand\dd{\mathrm d}
+          \newcommand{\eps}{\varepsilon}
+          \newcommand{\To}{\longrightarrow}
+          \newcommand{\hilbert}{\mathcal{H}}
+          \newcommand{\s}{\mathcal{S}_2}
+          \newcommand{\A}{\mathcal{A}}
+          \newcommand\h{\mathcal{H}}
+          \newcommand{\J}{\mathcal{J}}
+          \newcommand{\M}{\mathcal{M}}
+          \newcommand{\F}{\mathbb{F}}
+          \newcommand{\N}{\mathcal{N}}
+          \newcommand{\T}{\mathbb{T}}
+          \newcommand{\W}{\mathcal{W}}
+          \newcommand{\X}{\mathcal{X}}
+          \newcommand{\D}{\mathbb{D}}
+          \newcommand{\C}{\mathbb{C}}
+          \newcommand{\BOP}{\mathbf{B}}
+          \newcommand{\Z}{\mathbb{Z}}
+          \newcommand{\BH}{\mathbf{B}(\mathcal{H})}
+          \newcommand{\KH}{\mathcal{K}(\mathcal{H})}
+          \newcommand{\pick}{\mathcal{P}_2}
+          \newcommand{\schur}{\mathcal{S}_2}
+          \newcommand{\R}{\mathbb{R}}
+          \newcommand{\Complex}{\mathbb{C}}
+          \newcommand{\Field}{\mathbb{F}}
+          \newcommand{\RPlus}{\Real^{+}}
+          \newcommand{\Polar}{\mathcal{P}_{\s}}
+          \newcommand{\Poly}{\mathcal{P}(E)}
+          \newcommand{\EssD}{\mathcal{D}}
+          \newcommand{\Lop}{\mathcal{L}}
+          \newcommand{\cc}[1]{\overline{#1}}
+          \newcommand{\abs}[1]{\left\vert#1\right\vert}
+          \newcommand{\set}[1]{\left\{#1\right\}}
+          \newcommand{\seq}[1]{\left\lt#1\right>}
+          \newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+          \newcommand{\essnorm}[1]{\norm{#1}_{\ess}}
+          \newcommand{\tr}{\operatorname{tr}}
+          \newcommand{\ran}[1]{\operatorname{ran}#1}
+          \newcommand{\nt}{\stackrel{\mathrm {nt}}{\to}}
+          \newcommand{\pnt}{\xrightarrow{pnt}}
+          \newcommand{\ip}[2]{\left\langle #1, #2 \right\rangle}
+          \newcommand{\ad}{^\ast}
+          \newcommand{\inv}{^{-1}}
+          \newcommand{\adinv}{^{\ast -1}}
+          \newcommand{\invad}{^{-1 \ast}}
+          \newcommand\Pick{\mathcal P}
+          \newcommand\Ha{\mathbb{H}}
+          \newcommand{\HH}{\Ha\times\Ha}
+          \newcommand\Htau{\mathbb{H}(\tau)}
+          \newcommand{\vp}{\varphi}
+          \newcommand{\ph}{\varphi}
+          \newcommand\al{\alpha}
+          \newcommand\ga{\gamma}
+          \newcommand\de{\delta}
+          \newcommand\ep{\varepsilon}
+          \newcommand\la{\lambda}
+          \newcommand\up{\upsilon}
+          \newcommand\si{\sigma}
+          \newcommand\beq{\begin{equation}}
+          \newcommand\ds{\displaystyle}
+          \newcommand\eeq{\end{equation}}
+          \newcommand\df{\stackrel{\rm def}{=}}
+          \newcommand\ii{\mathrm i}
+          \newcommand{\vectwo}[2]
+          {
+             \begin{pmatrix} #1 \\ #2 \end{pmatrix}
+          }
+          \newcommand{\vecthree}[3]
+          {
+             \begin{pmatrix} #1 \\ #2 \\ #3 \end{pmatrix}
+          }
+          \newcommand\blue{\color{blue}}
+          \newcommand\black{\color{black}}
+          \newcommand\red{\color{red}}
+          %\newcommand\red{\color{black}}
+          \newcommand\nn{\nonumber}
+          \newcommand\bbm{\begin{bmatrix}}
+          \newcommand\ebm{\end{bmatrix}}
+          \newcommand\bpm{\begin{pmatrix}}
+          \newcommand\epm{\end{pmatrix}}
+          \numberwithin{equation}{section}
+          \newcommand\nin{\noindent}
+          \newcommand{\nCr}[2]{\,_{#1}C_{#2}} % nCr
+          \newcommand{\vec}[1]{{\bf #1}}
+          \newcommand{\ps}{\displaystyle \sum_{n=0}^\infty a_n x^n}
+          \newcommand{\psg}{\displaystyle \sum_{n=0}^\infty b_n x^n}
+          \newcommand{\hz}{\,\mathrm{Hz}}
+        </macros>
+    </docinfo>
+
+<article xml:id="rifdynamics">
+    <title>A library of examples: Iteration of rational inner maps on <m>\mathbb{T}^2</m></title>
+    <frontmatter>
+
+        <titlepage>
+            <author>
+              <personname>Alan Sola</personname>
+              <institution>Stockholm University</institution>
+            </author>
+            <author>
+              <personname>Ryan Tully-Doyle</personname>
+              <institution>Cal Poly, SLO</institution>
+            </author>
+
+            <date><today /></date>
+        </titlepage>
+
+        <abstract>
+                <p>This gallery of examples is intended to illustrate various behaviors of rational inner maps. Definitions and theorems are as found in the paper <xref provisional="RIFdyn"/>.</p>
+            </abstract>
+    </frontmatter>
+
+    <section><title>Function gallery</title>
+
+<!--         <example xml:id="fave"><title>A favorite function</title>
+
+        <p>Consider the function <m>\Phi</m> given by
+        <me>
+            \Phi(z,w) = \left(-\frac{2 w z-w-z}{-w-z+2}, w\right)
+        </me></p>
+
+        <figure>
+        <sbsgroup>
+        <sidebyside>
+        <figure> <caption>Vertical lines before mapping</caption>
+            <image source="images/vertparacurves.svg"/>
+        </figure>
+        <figure> <caption><m>\Phi^n</m> for <m>n=1</m></caption>
+            <image source="images/vfave1iter.svg"/>
+        </figure>
+        </sidebyside>
+        <sidebyside>
+        <figure> <caption><m>\Phi^n</m> for <m>n=2</m></caption>
+            <image source="images/vfave2iter.svg"/>
+        </figure>
+        <figure> <caption><m>\Phi^n</m> for <m>n=3</m></caption>
+            <image source="images/vfave3iter.svg"/>
+        </figure>
+        </sidebyside>
+        </sbsgroup>
+        <caption>Iteration of <m>\Phi</m></caption>
+        </figure>
+        </example> -->
+   
+        <example><title>Stacked rotation belts</title>
+
+        <p>Consider the function
+                <me>\Phi(z,w)=\left(\frac{\left(13 w^4+8 w^3+10 w^2+1\right) z-(w-1)^2 \left(3 w^2+2 w+3\right)}{w^4-(w-1)^2 \left(3 w^2+2 w+3\right) z+10 w^2+8 w+13}, w\right).</me></p>
+
+        <p>The invariant curves and level curves are
+                <sidebyside>
+                <figure> <caption>Invariant curves for <m>\phi</m></caption>
+                    <image source="images/stackedrotinv.png"/>
+                </figure>
+                <figure> <caption>Level curves for <m>\phi</m></caption>
+                    <image  source="images/stackedrotlevel.png"/>
+                </figure>
+                </sidebyside>
+        Notice that the level curves indicate that <m>\Phi</m> has a singular fixed point at <m>(z, w) = (1, -1)</m></p>
+
+
+        <p>The dynamical behavior for several iterations of <m>\Phi</m> is
+                <figure>
+                <sbsgroup>
+                <sidebyside>
+                <figure> <caption>Vertical lines before mapping</caption>
+                    <image source="images/initialinput.png"/>
+                </figure>
+                <figure> <caption><m>\Phi^n</m> for <m>n=1</m></caption>
+                    <image source="images/stackedrotiter1.png"/>
+                </figure>
+                </sidebyside>
+                <sidebyside>
+                <figure> <caption><m>\Phi^n</m> for <m>n=2</m></caption>
+                    <image source="images/stackedrotiter2.png"/>
+                </figure>
+                <figure> <caption><m>\Phi^n</m> for <m>n=3</m></caption>
+                    <image source="images/stackedrotiter3.png"/>
+                </figure>
+                </sidebyside>
+                </sbsgroup>
+                <caption>Iteration of <m>\Phi</m></caption>
+                </figure></p>
+
+        <p>Because there are three horizontal invariant curves, we should observe four <q>stacked</q> rotation belts bounded by identity fiber maps. A computation of the multipliers as a function of <m>w</m> gives the following visualization.
+        <figure>
+            <image source="images/stackedrotrot.png"/>
+            <caption>Rotation number as a function of fiber height</caption>
+        </figure></p>
+
+
+
+
+        </example>
+
+        <example><title>Multiple crossings</title>
+
+        <p>Consider the function
+            <me>
+                \Phi(z, w) = -\left(\frac{(3 - 4 i)- 10 w - (14 - 24 i) w^2 - (2 - 32 i) w^3 + (7 +12 i) w^4 + ((1 - 4 i) - 8 w - (4 - 24 i) w^2 + (12 + 32 i) w^3 + (15 + 12 i) w^4) z}{(15 - 12 i) + (12 - 32 i) w - (4 + 24 i) w^2 - 8 w^3 + (1 + 4 i) w^4 + ((7 - 12 i) - (2 + 32 i) w - (14 + 24 i) w^2 - 10 w^3 + (3 + 4 i) w^4) z},w\right).
+            </me></p>
+
+            <p>The invariant curves and level curves are
+                <sidebyside>
+                <figure> <caption>Invariant curves for <m>\phi</m></caption>
+                    <image source="images/twocrossinv.png"/>
+                </figure>
+                <figure> <caption>Level curves for <m>\phi</m></caption>
+                    <image  source="images/twocrosslevel.png"/>
+                </figure>
+                </sidebyside>
+        Notice that the level curves indicate that <m>\Phi</m> has singular fixed point at <m>(z, w) = (-1, -1)</m> and <m>(z, w) = (1, -3/5 - 4/5i)</m> and that each of these is a crossing of invariant curves.</p>
+
+                <p>The dynamical behavior for several iterations of <m>\Phi</m> is
+                <figure>
+                <sbsgroup>
+                <sidebyside>
+                <figure> <caption>Vertical lines before mapping</caption>
+                    <image source="images/initialinput.png"/>
+                </figure>
+                <figure> <caption><m>\Phi^n</m> for <m>n=1</m></caption>
+                    <image source="images/twocrossiter1.png"/>
+                </figure>
+                </sidebyside>
+                <sidebyside>
+                <figure> <caption><m>\Phi^n</m> for <m>n=2</m></caption>
+                    <image source="images/twocrossiter2.png"/>
+                </figure>
+                <figure> <caption><m>\Phi^n</m> for <m>n=3</m></caption>
+                    <image source="images/twocrossiter3.png"/>
+                </figure>
+                </sidebyside>
+                </sbsgroup>
+                <caption>Iteration of <m>\Phi</m></caption>
+                </figure></p>
+
+                <p>With a choice of <m>a = Pi</m>, the polynomial <m>Q_a</m> factors as
+                <me>4 (w+1)^2 ((1+2 i) w+(-1+2 i))^2 \left((7-12 i) w^4+(12-8 i) w^3+26 w^2+(12+8 i) w+(7+12 i)\right)</me>, exhibiting the normal crossings visible in the images.</p>
+        </example>
+
+        <example><title>Two variable Blaschke products</title>
+
+        <p>Let
+        <me> B_a(z) = \frac{z - a}{ 1 - \cc{a}z}.</me>
+        Let <m>\Phi</m> be the RIM given by
+        <me>
+            \Phi(z,w) = (B_{1/2}(z)B_{i/3 }(w), B_{i/3 }(z) B_{-i/4 }(w))
+        </me>
+        </p>
+
+        <p>Here, unlike the <m>(1, n)</m> RISP case, we see chaotic behavior. In particular, we do not get curves of fixed points. The dynamical behavior for several iterations of <m>\Phi</m> is
+                <figure>
+                <sbsgroup>
+                <sidebyside>
+                <figure> <caption>Vertical lines before mapping</caption>
+                    <image source="images/initialinput.png"/>
+                </figure>
+                <figure> <caption><m>\Phi^n</m> for <m>n=1</m></caption>
+                    <image source="images/twovarblaschkeiter1.png"/>
+                </figure>
+                </sidebyside>
+                <sidebyside>
+                <figure> <caption><m>\Phi^n</m> for <m>n=2</m></caption>
+                    <image source="images/twovarblaschkeiter2.png"/>
+                </figure>
+                <figure> <caption><m>\Phi^n</m> for <m>n=3</m></caption>
+                    <image source="images/twovarblaschkeiter5.png"/>
+                </figure>
+                </sidebyside>
+                </sbsgroup>
+                <caption>Iteration of <m>\Phi</m></caption>
+                </figure></p>
+
+    </example>
+
+    <example><title>A degree <m>(2, 4)</m> RISP</title>
+
+        <p>Consider the function given by
+        <me>
+            \Phi(z, w) = \left(-\frac{-32 w^4 z^2+38 w^4 z-10 w^4+34 w^3 z^2-32 w^3 z+2 w^3-30 w^2 z^2+36 w^2 z-2 w^2+10 w z^2-8 w z-6 w-6 z^2+14 z-8}{8 w^4 z^2-14 w^4 z+6 w^4+6 w^3 z^2+8 w^3 z-10 w^3+2 w^2 z^2-36 w^2 z+30 w^2-2 w z^2+32 w z-34 w+10 z^2-38 z+32}, w\right),
+        </me>
+        which has bidegree <m>(2, 4)</m> as a RISP.</p>
+
+        <p>Unlike the <m>(1, n)</m> case, invariant curves can now sweep through rotating fibers.
+                <sidebyside>
+                <figure> <caption>Invariant curves for <m>\phi</m></caption>
+                    <image source="images/twofourinv.png"/>
+                </figure>
+                <figure> <caption>Level curves for <m>\phi</m></caption>
+                    <image  source="images/twofourlevel.png"/>
+                </figure>
+                </sidebyside>
+        Notice that the level curves indicate that <m>\Phi</m> has singular fixed point at <m>(z, w) = (1, 1)</m> and <m>(z, w) = (1, -1)</m>.</p>
+
+                <p>One detail to note in the iteration portraits below is that the rotations are constrained by the fixed point structure of the initial vertical lines.</p>
+                <figure>
+                <sbsgroup>
+                <sidebyside>
+                <figure> <caption>Vertical lines before mapping</caption>
+                    <image source="images/twofourinitial.png"/>
+                </figure>
+                <figure> <caption><m>\Phi^n</m> for <m>n=1</m></caption>
+                    <image source="images/twofouriter1.png"/>
+                </figure>
+                </sidebyside>
+                <sidebyside>
+                <figure> <caption><m>\Phi^n</m> for <m>n=2</m></caption>
+                    <image source="images/twofouriter2.png"/>
+                </figure>
+                <figure> <caption><m>\Phi^n</m> for <m>n=5</m></caption>
+                    <image source="images/twofouriter5.png"/>
+                </figure>
+                </sidebyside>
+                </sbsgroup>
+                <caption>Iteration of <m>\Phi</m></caption>
+                </figure>
+            </example>
+
+            <example><title>Singular inner function</title>
+
+            <p>Consider the function 
+                <me>\Phi(z, w) = \left(\exp \left(-\frac{w z+1}{1-w z}\right), w\right),</me>
+            with a so-called singular inner function in the first slot.</p>
+
+        
+
+                <figure>
+                <sbsgroup>
+                <sidebyside>
+                <figure> <caption>Vertical lines before mapping</caption>
+                    <image source="images/initialinput.png"/>
+                </figure>
+                <figure> <caption><m>\Phi^n</m> for <m>n=1</m></caption>
+                    <image source="images/singinneriter1.png"/>
+                </figure>
+                </sidebyside>
+                <sidebyside>
+                <figure> <caption><m>\Phi^n</m> for <m>n=2</m></caption>
+                    <image source="images/singinneriter2.png"/>
+                </figure>
+                <figure> <caption><m>\Phi^n</m> for <m>n=5</m></caption>
+                    <image source="images/singinneriter5.png"/>
+                </figure>
+                </sidebyside>
+                </sbsgroup>
+                <caption>Iteration of <m>\Phi</m></caption>
+                </figure>
+            </example>
+
+            <example><title>RISP with <m>\Phi = (\phi, w^2)</m></title>
+
+            <p>Consider the function <m>\Phi</m> with 
+            <me>
+            \Phi(z, w) = \left(-\frac{2 w z-w-z}{-w-z+2},w^2\right),
+            </me>
+            where we have <m>\phi_2(w) = w^2</m> in the second slot.</p>
+
+            <p>Even in this simple case, the behavior of <m>\Phi</m> is quite different from the related Example 2.1.
+            <figure>
+                <sbsgroup>
+                <sidebyside>
+                <figure> <caption>Vertical lines before mapping</caption>
+                    <image source="images/initialinput.png"/>
+                </figure>
+                <figure> <caption><m>\Phi^n</m> for <m>n=1</m></caption>
+                    <image source="images/deg2rispiter1.png"/>
+                </figure>
+                </sidebyside>
+                <sidebyside>
+                <figure> <caption><m>\Phi^n</m> for <m>n=2</m></caption>
+                    <image source="images/deg2rispiter2.png"/>
+                </figure>
+                <figure> <caption><m>\Phi^n</m> for <m>n=3</m></caption>
+                    <image source="images/deg2rispiter3.png"/>
+                </figure>
+                </sidebyside>
+                </sbsgroup>
+                <caption>Iteration of <m>\Phi</m></caption>
+                </figure></p>
+            </example>
+
+
+
+    </section>
+    <section><title>Reading</title>
+            <references><title>References</title>
+            <biblio type="raw" xml:id="Aba98">M. Abate, The Julia-Wolff-Carathéodory theorem in polydisks, <em>J. Anal. Math.</em> <b>74</b> (1998), 275-306.</biblio>
+            <biblio type="raw" xml:id="AMS06">J. Agler, J.E. M\McC Carthy, and M. Stankus, Toral algebraic sets and function theory on polydisks, <em>J. Geom. Anal.</em> <b>16</b> (2006), 551-562.</biblio>
+            <biblio type="raw" xml:id="AMY12"> J. Agler, J.E. M\McC Carthy, and N.J. Young, A Carathéodory theorem for the bidisk via Hilbert space methods, <em>Math. Ann.</em> <b>352</b> (2012), 581-624.</biblio>
+            <biblio type="raw" xml:id="AG16">L. Arosio and P. Gumenyuk, Valiron and Abel equations for holomorphic self-maps of the polydisc, <em>Internat. J. Math.</em> <b>27</b> (2016), 1650034.</biblio>
+            <biblio type="raw" xml:id="BearBook">A. Beardon, <em>Iteration of rational functions.</em> Graduate Texts in Mathematics 132, Springer-Verlag, New York. 1991.</biblio>
+            <biblio type="raw" xml:id="BCSprep">K. Bickel, J.A. Cima, and A.A. Sola, Clark measures for rational inner functions, preprint, available at <url href="https://arxiv.org/abs/2101.00508"/></biblio>
+            <biblio type="raw" xml:id="BKPSprep">K. Bickel, G. Knese, J.E. Pascoe, and A. Sola, Local theory of stable polynomials and bounded rational functions of several variables, preprint 2021.</biblio>
+            <biblio type="raw" xml:id="BPS18">K. Bickel, J.E. Pascoe, and A. Sola, Derivatives of rational inner functions: geometry of singularities and integrability at the boundary, <em>Proc. London Math. Soc.</em> <b>116</b> (2018), 281-329.</biblio>
+            <biblio type="raw" xml:id="BPS20">K. Bickel, J. E. Pascoe, and A. Sola, Level curve portraits of rational inner functions, <em>Ann. Sc. Norm. Sup. Pisa Cl. Sc.</em> <b> XXI</b> (2020), 451-494.</biblio>
+            <biblio type="raw" xml:id="BPSajm">K. Bickel, J. E. Pascoe, and A. Sola, Singularities of rational inner functions in higher dimensions, <em>Amer. J. Math.</em>, to appear.</biblio>
+            <biblio type="raw" xml:id="CGBook">L. Carleson and T.W.  Gamelin, <em> Complex dynamics</em>, Universitext: Tracts in Mathematics, Springer-Verlag, New York, 1993.</biblio>
+            <biblio type="raw" xml:id="C32">H. Cartan, Les fonctions de deux variables complexes. L'itération des transformations intérieures d'un domaine borné (French), Math. Z. <b>35</b> (1932), 760-773.</biblio>
+            <biblio type="raw" xml:id="ForSurv">J.E. Fornaess, <em>Dynamics in several complex variables</em>. CBMS Regional Conference Series in Mathematics, 87. Providence, RI, 1996.</biblio>
+            <biblio type="raw" xml:id="F05">C. Frosini, Dynamics on bounded domains, in: <em> The <m>p</m>-harmonic equation and recent advances in analysis</em>, 99-117, Contemp. Math. <b>370</b> Amer. Math. Soc., Providence, RI, 2005.</biblio>
+            <biblio type="raw" xml:id="H54">M. Hervé, Sur l'itération des transformations analytiques dans le bicercle unité, <em>Ann. Sci. Ecole Norm. Sup.</em> (3) <b> 71</b> (1954), 1-28.</biblio>
+            <biblio type="raw" xml:id="J99">M. Jonsson, Dynamics of polynomials skew-products on <m>\mathbb{C}^2</m>, <em>Math. Ann.</em> <b>314</b> (1999), 403-447.</biblio>
+            <biblio type="raw" xml:id="Kne10">G. Knese, Polynomials defining distinguished varieties, <em>Trans. Amer. Math. Soc.</em> <b> 362</b> (2010), 5635-5655.</biblio>
+            <biblio type="raw" xml:id="Kne15">G. Knese, Integrability and regularity of rational functions, <em>Proc. London. Math. Soc.</em> <b> 111</b> (2015), 1261-1306.</biblio>
+            <biblio type="raw" xml:id="MilBook">J. Milnor, <em> Dynamics in one complex variable</em>. Annals of Mathematics Studies 160, Princeton Univ. Press, Princeton, NJ, 2006. </biblio>
+            <biblio type="raw" xml:id="NThesis">J. Nowell, Denjoy-Wolff sets for analytic maps on the polydisk, PhD Thesis, University of Florida, 2019.</biblio>
+            <biblio type="raw" xml:id="PR19">H. Peters and J. Raissy, Fatou components of elliptic polynomial skew-products, <em>Ergodic Theory Dynam. Systems</em> <b> 39</b> (2019), 2235-2247.</biblio>
+            <biblio type="raw" xml:id="PR10">E.R. Pujals and R.K.W. Roeder, Two-dimensional Blaschke products: degree growth and ergodic consequences, <em>Indiana Univ. Math. J.</em> <b> 59</b> (2010), 301-325.</biblio>
+            <biblio type="raw" xml:id="PS08">E.R. Pujals and M. Shub, Dynamics of two-dimensional Blaschke products, <em> Ergodic Theory Dynam. Systems</em> <b> 28</b> (2008), 575-585.</biblio>
+            <biblio type="raw" xml:id="Rud69"> W. Rudin, <em>Function Theory in polydisks</em>,
+            W. A. Benjamin, Inc., New York-Amsterdam, 1969.</biblio>
+            <biblio type="raw" xml:id="SibSurv">N. Sibony, Dynamique des applications rationelles de <m>\mathbf{P}^k</m>. (French) <em> Dynamique et géométrie complexes (Lyon, 1997)</em>, Panor. Synthéses <b> 8</b>, Soc. Math. France, Paris, 1999.</biblio>
+            <biblio type="raw" xml:id="SBJ17">J. Slipantschuk, O.F. Bandtlow, and W. Just, Complete spectral data for analytic Anosov maps of the torus, <em>Nonlinearity</em> <b> 30</b> (2017), 2667-2686.</biblio>
+            <biblio type="raw" xml:id="TD17">R. Tully-Doyle, Analytic functions on the bidisk at boundary singularities via Hilbert space methods, <em>Oper. Matrices</em> <b> 11</b> (2017), 55-70.</biblio>
+             <biblio type="raw" xml:id="TDpage">R. Tully-Doyle, Personal webpage <url href="https://github.com/rtullydo/RISP-dynamics"/> </biblio>
+        </references>
+    </section>
+
+
+
+
+</article>
+</pretext>
