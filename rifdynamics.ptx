@@ -134,13 +134,15 @@
 
     <section><title>Function gallery</title>
 
-<!--         <example xml:id="fave"><title>A favorite function</title>
+        <subsection><title>Prototypical examples of bidegree <m>(1, n)</m> RISPs</title>
+        <example xml:id="fave"><title>A favorite function</title>
 
         <p>Consider the function <m>\Phi</m> given by
         <me>
-            \Phi(z,w) = \left(-\frac{2 w z-w-z}{-w-z+2}, w\right)
+            \Phi(z,w) = \left(-\frac{2 w z-w-z}{-w-z+2}, w\right).
         </me></p>
 
+        <p>This function and basic variants are the foundational example in the study of rational inner functions in two variables.</p>
         <figure>
         <sbsgroup>
         <sidebyside>
@@ -162,7 +164,44 @@
         </sbsgroup>
         <caption>Iteration of <m>\Phi</m></caption>
         </figure>
-        </example> -->
+        </example>
+
+        <example xml:id="ex-AMYex"><title>Agler, McCarthy, Young function</title>
+        <p>Consider the rational inner function
+        <men xml:id="AMYRIF">
+        \phi(z_1,z_2)=-\frac{\tilde{p}(z)}{p(z)}=-\frac{4z_1z_2^2 - z_2^2 - 3z_1z_2 - z_2 + z_1}{4 - z_1 - 3z_2 - z_1z_2 + z_2^2},
+        </men>
+        which features as an example in the paper <xref ref="AMY12"/>, and has been further studied in <xref ref="BPS20"/>[Section 1.3] and <xref ref="BCSprep"/>[Example 5.2] (without the minus sign in front).</p>
+
+        <p>The corresponding RISP <m>\Phi(z,w) = (\phi, w)</m> has a SF point corresponding to a normal crossing of invariant components and a rotation band.</p>
+
+        <figure xml:id="AMYplots">
+            <sbsgroup>
+                <sidebyside>
+                    <figure> <caption><m>\Phi^n</m> for <m>n=1</m></caption>
+                        <image source="images/AMY1iter.svg"/>
+                    </figure>
+                    <figure> <caption><m>\Phi^n</m> for <m>n=2</m></caption>
+                        <image source="images/AMY2iter.svg"/>
+                    </figure>
+                </sidebyside>
+                <sidebyside>
+                    <figure> <caption><m>\Phi^n</m> for <m>n=5</m></caption>
+                        <image source="images/AMY5iter.svg"/>
+                    </figure>
+                    <figure> <caption><m>\Gamma(\Phi)\cap\mathbb{T}^2</m>. Parabolic fibers in pink.</caption>
+                        <image source="images/AMYinvacurveswpara.svg"/>
+                    </figure>
+                </sidebyside>
+            </sbsgroup>
+             <caption>Iteration of <m>\Phi</m> given by <xref ref="AMYRIF"/> on <m>\mathbb{T}^2</m>. (Successive images of the vertical axis marked red)</caption>
+        </figure>
+
+
+        </example>
+        </subsection>
+
+        <subsection><title><m>(1, n)</m> RISPs with more complex behavior</title>
    
         <example><title>Stacked rotation belts</title>
 
@@ -260,42 +299,11 @@
                 <me>4 (w+1)^2 ((1+2 i) w+(-1+2 i))^2 \left((7-12 i) w^4+(12-8 i) w^3+26 w^2+(12+8 i) w+(7+12 i)\right)</me>, exhibiting the normal crossings visible in the images.</p>
         </example>
 
-        <example><title>Two variable Blaschke products</title>
+        </subsection>
 
-        <p>Let
-        <me> B_a(z) = \frac{z - a}{ 1 - \cc{a}z}.</me>
-        Let <m>\Phi</m> be the RIM given by
-        <me>
-            \Phi(z,w) = (B_{1/2}(z)B_{i/3 }(w), B_{i/3 }(z) B_{-i/4 }(w))
-        </me>
-        </p>
+        <subsection><title>Higher order RISPs</title>
 
-        <p>Here, unlike the <m>(1, n)</m> RISP case, we see chaotic behavior. In particular, we do not get curves of fixed points. The dynamical behavior for several iterations of <m>\Phi</m> is
-                <figure>
-                <sbsgroup>
-                <sidebyside>
-                <figure> <caption>Vertical lines before mapping</caption>
-                    <image source="images/initialinput.png"/>
-                </figure>
-                <figure> <caption><m>\Phi^n</m> for <m>n=1</m></caption>
-                    <image source="images/twovarblaschkeiter1.png"/>
-                </figure>
-                </sidebyside>
-                <sidebyside>
-                <figure> <caption><m>\Phi^n</m> for <m>n=2</m></caption>
-                    <image source="images/twovarblaschkeiter2.png"/>
-                </figure>
-                <figure> <caption><m>\Phi^n</m> for <m>n=3</m></caption>
-                    <image source="images/twovarblaschkeiter5.png"/>
-                </figure>
-                </sidebyside>
-                </sbsgroup>
-                <caption>Iteration of <m>\Phi</m></caption>
-                </figure></p>
-
-    </example>
-
-    <example><title>A degree <m>(2, 4)</m> RISP</title>
+        <example><title>A degree <m>(2, 4)</m> RISP</title>
 
         <p>Consider the function given by
         <me>
@@ -338,37 +346,6 @@
                 </figure>
             </example>
 
-            <example><title>Singular inner function</title>
-
-            <p>Consider the function 
-                <me>\Phi(z, w) = \left(\exp \left(-\frac{w z+1}{1-w z}\right), w\right),</me>
-            with a so-called singular inner function in the first slot.</p>
-
-        
-
-                <figure>
-                <sbsgroup>
-                <sidebyside>
-                <figure> <caption>Vertical lines before mapping</caption>
-                    <image source="images/initialinput.png"/>
-                </figure>
-                <figure> <caption><m>\Phi^n</m> for <m>n=1</m></caption>
-                    <image source="images/singinneriter1.png"/>
-                </figure>
-                </sidebyside>
-                <sidebyside>
-                <figure> <caption><m>\Phi^n</m> for <m>n=2</m></caption>
-                    <image source="images/singinneriter2.png"/>
-                </figure>
-                <figure> <caption><m>\Phi^n</m> for <m>n=5</m></caption>
-                    <image source="images/singinneriter5.png"/>
-                </figure>
-                </sidebyside>
-                </sbsgroup>
-                <caption>Iteration of <m>\Phi</m></caption>
-                </figure>
-            </example>
-
             <example><title>RISP with <m>\Phi = (\phi, w^2)</m></title>
 
             <p>Consider the function <m>\Phi</m> with 
@@ -401,9 +378,93 @@
                 </figure></p>
             </example>
 
+        </subsection>
 
+        <subsection><title>Other two-variable examples</title>
+
+        <example><title>Two variable Blaschke products</title>
+
+        <p>Let
+        <me> B_a(z) = \frac{z - a}{ 1 - \cc{a}z}.</me>
+        Let <m>\Phi</m> be the RIM given by
+        <me>
+            \Phi(z,w) = (B_{1/2}(z)B_{i/3 }(w), B_{i/3 }(z) B_{-i/4 }(w))
+        </me>
+        </p>
+
+        <p>Here, unlike the <m>(1, n)</m> RISP case, we see chaotic behavior. In particular, we do not get curves of fixed points. The dynamical behavior for several iterations of <m>\Phi</m> is
+                <figure>
+                <sbsgroup>
+                <sidebyside>
+                <figure> <caption>Vertical lines before mapping</caption>
+                    <image source="images/initialinput.png"/>
+                </figure>
+                <figure> <caption><m>\Phi^n</m> for <m>n=1</m></caption>
+                    <image source="images/twovarblaschkeiter1.png"/>
+                </figure>
+                </sidebyside>
+                <sidebyside>
+                <figure> <caption><m>\Phi^n</m> for <m>n=2</m></caption>
+                    <image source="images/twovarblaschkeiter2.png"/>
+                </figure>
+                <figure> <caption><m>\Phi^n</m> for <m>n=3</m></caption>
+                    <image source="images/twovarblaschkeiter5.png"/>
+                </figure>
+                </sidebyside>
+                </sbsgroup>
+                <caption>Iteration of <m>\Phi</m></caption>
+                </figure></p>
+
+    </example>
+
+    
+
+            <example><title>Singular inner function</title>
+
+            <p>Consider the function 
+                <me>\Phi(z, w) = \left(\exp \left(-\frac{w z+1}{1-w z}\right), w\right),</me>
+            with a so-called singular inner function in the first slot.</p>
+
+        
+
+                <figure>
+                <sbsgroup>
+                <sidebyside>
+                <figure> <caption>Vertical lines before mapping</caption>
+                    <image source="images/initialinput.png"/>
+                </figure>
+                <figure> <caption><m>\Phi^n</m> for <m>n=1</m></caption>
+                    <image source="images/singinneriter1.png"/>
+                </figure>
+                </sidebyside>
+                <sidebyside>
+                <figure> <caption><m>\Phi^n</m> for <m>n=2</m></caption>
+                    <image source="images/singinneriter2.png"/>
+                </figure>
+                <figure> <caption><m>\Phi^n</m> for <m>n=5</m></caption>
+                    <image source="images/singinneriter5.png"/>
+                </figure>
+                </sidebyside>
+                </sbsgroup>
+                <caption>Iteration of <m>\Phi</m></caption>
+                </figure>
+            </example>
+
+        </subsection>
 
     </section>
+
+    <section><title>Mathematica code</title>
+
+        <p>The notebooks below contain code that produces the examples from the manuscript, as well as notebooks to produce the examples above. (right-click and "save as").
+        <ul>
+            <li><url href="https://github.com/rtullydo/RISP-dynamics/raw/main/examples.nb">examples.nb</url> contains computations that produce the examples covered in the manuscript, as well as interesting extensions.</li>
+            <li><url href="https://raw.githubusercontent.com/rtullydo/RISP-dynamics/main/risps_from_graphs.nb">risps_from_graphs.nb</url> contains a method for producing new RISPs from the Nevanlinna representation for analytic self-maps of the upper half plane in several variables. See <url href="https://arxiv.org/abs/1203.2261">Agler, Tully-Doyle, Young</url>  , <url href="https://arxiv.org/abs/1605.08707">Pascoe</url>, and <url href="https://arxiv.org/abs/1803.04666">Bickel, Pascoe, Sola</url> for more on Nevanlinna representations and RIFs.</li>
+            <li><url href="https://raw.githubusercontent.com/rtullydo/RISP-dynamics/main/qalpha_test.nb">qalpha_test.nb</url> contains code to work with the polynomial qa.</li>
+        </ul>
+        </p>
+    </section>
+
     <section><title>Reading</title>
             <references><title>References</title>
             <biblio type="raw" xml:id="Aba98">M. Abate, The Julia-Wolff-Carathéodory theorem in polydisks, <em>J. Anal. Math.</em> <b>74</b> (1998), 275-306.</biblio>
