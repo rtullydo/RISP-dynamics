@@ -166,7 +166,7 @@
         </figure>
         </example>
 
-        <example xml:id="ex-AMYex"><title>Agler, McCarthy, Young function</title>
+        <example><title>Agler, McCarthy, Young function</title>
         <p>Consider the rational inner function
         <men xml:id="AMYRIF">
         \phi(z_1,z_2)=-\frac{\tilde{p}(z)}{p(z)}=-\frac{4z_1z_2^2 - z_2^2 - 3z_1z_2 - z_2 + z_1}{4 - z_1 - 3z_2 - z_1z_2 + z_2^2},
@@ -175,7 +175,7 @@
 
         <p>The corresponding RISP <m>\Phi(z,w) = (\phi, w)</m> has a SF point corresponding to a normal crossing of invariant components and a rotation band.</p>
 
-        <figure xml:id="AMYplots">
+        <figure >
             <sbsgroup>
                 <sidebyside>
                     <figure> <caption><m>\Phi^n</m> for <m>n=1</m></caption>
