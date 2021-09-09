@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-09-07T22:07:12-07:00       *-->
+<!--*       on 2021-09-09T10:57:26-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -325,7 +325,7 @@ MathJax.Hub.Config({
 \end{equation*}
 </div>
 <p data-braille="continuation">where we have \(\phi_2(w) = w^2\) in the second slot.</p>
-<p id="p-18">Even in this simple case, the behavior of \(\Phi\) is quite different from the related Example 2.1. <figure class="figure figure-like" id="figure-33"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<p id="p-18">Even in this simple case, the behavior of \(\Phi\) is quite different from the related Example 1.1. <figure class="figure figure-like" id="figure-33"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
 <div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-34"><img src="images/initialinput.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(a)</span><span class="space"> </span>Vertical lines before mapping</figcaption></figure></div>
 <div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-35"><img src="images/deg2rispiter1.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(b)</span><span class="space"> </span>\(\Phi^n\) for \(n=1\)</figcaption></figure></div>
 </div></div>
@@ -333,12 +333,50 @@ MathJax.Hub.Config({
 <div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-36"><img src="images/deg2rispiter2.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(c)</span><span class="space"> </span>\(\Phi^n\) for \(n=2\)</figcaption></figure></div>
 <div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-37"><img src="images/deg2rispiter3.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(d)</span><span class="space"> </span>\(\Phi^n\) for \(n=3\)</figcaption></figure></div>
 </div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.19<span class="period">.</span></span><span class="space"> </span>Iteration of \(\Phi\)</figcaption></figure></p></article></div></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.19<span class="period">.</span></span><span class="space"> </span>Iteration of \(\Phi\)</figcaption></figure></p></article></div>
+<article class="example example-like" id="example-7"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-7"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span><span class="space"> </span><span class="title">RISP with \(\Phi = (\phi, i w)\).</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-7"><article class="example example-like"><p id="p-19">Consider the function \(\Phi\) with</p>
+<div class="displaymath">
+\begin{equation*}
+\Phi(z, w) = \left(-\frac{2 w z-w-z}{-w-z+2},i w\right),
+\end{equation*}
+</div>
+<p data-braille="continuation">where we have \(\phi_2(w) = i w\) in the second slot.</p>
+<p id="p-20">Again, the behavior of \(\Phi\) is quite different from the related Example 1.1. <figure class="figure figure-like" id="figure-38"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-39"><img src="images/initialinput.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(a)</span><span class="space"> </span>Vertical lines before mapping</figcaption></figure></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-40"><img src="images/twotwoIwiter1.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(b)</span><span class="space"> </span>\(\Phi^n\) for \(n=1\)</figcaption></figure></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-41"><img src="images/twotwoIwiter2.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(c)</span><span class="space"> </span>\(\Phi^n\) for \(n=2\)</figcaption></figure></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-42"><img src="images/twotwoIwiter5.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(d)</span><span class="space"> </span>\(\Phi^n\) for \(n=5\)</figcaption></figure></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.21<span class="period">.</span></span><span class="space"> </span>Iteration of \(\Phi\)</figcaption></figure></p>
+<p id="p-21">We can observe the periodic structure of the mapping via an animation, where each frame represents the image of that iteration.</p>
+<figure class="figure figure-like" id="figure-43"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/rotw.gif" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.22<span class="period">.</span></span><span class="space"> </span>10 iterations of \(\Phi\)</figcaption></figure></article></div></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.4</span> <span class="title">Other two-variable examples</span>
 </h3>
-<article class="example example-like" id="example-7"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-7"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span><span class="space"> </span><span class="title">Two variable Blaschke products.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-7"><article class="example example-like"><p id="p-19">Let</p>
+<article class="example example-like" id="example-8"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-8"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.23</span><span class="period">.</span><span class="space"> </span><span class="title">Monomial mapping.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-8"><article class="example example-like"><p id="p-22">Consider the function</p>
+<div class="displaymath">
+\begin{equation*}
+\Phi(z, w) = \left(z^2w^3, z^5w^2 \right).
+\end{equation*}
+</div>
+<figure class="figure figure-like" id="figure-44"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-45"><img src="images/initialinput.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(a)</span><span class="space"> </span>Vertical lines before mapping</figcaption></figure></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-46"><img src="images/monomialiter1.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(b)</span><span class="space"> </span>\(\Phi^n\) for \(n=1\)</figcaption></figure></div>
+</div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-47"><img src="images/monomialiter2.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(c)</span><span class="space"> </span>\(\Phi^n\) for \(n=2\)</figcaption></figure></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-48"><img src="images/monomialiter3.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(d)</span><span class="space"> </span>\(\Phi^n\) for \(n=3\)</figcaption></figure></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.24<span class="period">.</span></span><span class="space"> </span>Iteration of \(\Phi\)</figcaption></figure></article></div>
+<article class="example example-like" id="example-9"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-9"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.25</span><span class="period">.</span><span class="space"> </span><span class="title">Two variable Blaschke products.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-9"><article class="example example-like"><p id="p-23">Let</p>
 <div class="displaymath">
 \begin{equation*}
 B_a(z) = \frac{z - a}{ 1 - \cc{a}z}.
@@ -350,33 +388,33 @@ B_a(z) = \frac{z - a}{ 1 - \cc{a}z}.
 \Phi(z,w) = (B_{1/2}(z)B_{i/3 }(w), B_{i/3 }(z) B_{-i/4 }(w))
 \end{equation*}
 </div>
-<p id="p-20">Here, unlike the \((1, n)\) RISP case, we see chaotic behavior. In particular, we do not get curves of fixed points. The dynamical behavior for several iterations of \(\Phi\) is <figure class="figure figure-like" id="figure-38"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-39"><img src="images/initialinput.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(a)</span><span class="space"> </span>Vertical lines before mapping</figcaption></figure></div>
-<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-40"><img src="images/twovarblaschkeiter1.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(b)</span><span class="space"> </span>\(\Phi^n\) for \(n=1\)</figcaption></figure></div>
+<p id="p-24">Here, unlike the \((1, n)\) RISP case, we see chaotic behavior. In particular, we do not get curves of fixed points. The dynamical behavior for several iterations of \(\Phi\) is <figure class="figure figure-like" id="figure-49"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-50"><img src="images/initialinput.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(a)</span><span class="space"> </span>Vertical lines before mapping</figcaption></figure></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-51"><img src="images/twovarblaschkeiter1.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(b)</span><span class="space"> </span>\(\Phi^n\) for \(n=1\)</figcaption></figure></div>
 </div></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-41"><img src="images/twovarblaschkeiter2.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(c)</span><span class="space"> </span>\(\Phi^n\) for \(n=2\)</figcaption></figure></div>
-<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-42"><img src="images/twovarblaschkeiter5.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(d)</span><span class="space"> </span>\(\Phi^n\) for \(n=3\)</figcaption></figure></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-52"><img src="images/twovarblaschkeiter2.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(c)</span><span class="space"> </span>\(\Phi^n\) for \(n=2\)</figcaption></figure></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-53"><img src="images/twovarblaschkeiter5.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(d)</span><span class="space"> </span>\(\Phi^n\) for \(n=3\)</figcaption></figure></div>
 </div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.21<span class="period">.</span></span><span class="space"> </span>Iteration of \(\Phi\)</figcaption></figure></p></article></div>
-<article class="example example-like" id="example-8"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-8"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.22</span><span class="period">.</span><span class="space"> </span><span class="title">Singular inner function.</span>
-</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-8"><article class="example example-like"><p id="p-21">Consider the function</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.26<span class="period">.</span></span><span class="space"> </span>Iteration of \(\Phi\)</figcaption></figure></p></article></div>
+<article class="example example-like" id="example-10"><a data-knowl="" class="id-ref example-knowl original" data-refid="hk-example-10"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.27</span><span class="period">.</span><span class="space"> </span><span class="title">Singular inner function.</span>
+</h6></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-10"><article class="example example-like"><p id="p-25">Consider the function</p>
 <div class="displaymath">
 \begin{equation*}
 \Phi(z, w) = \left(\exp \left(-\frac{w z+1}{1-w z}\right), w\right),
 \end{equation*}
 </div>
 <p data-braille="continuation">with a so-called singular inner function in the first slot.</p>
-<figure class="figure figure-like" id="figure-43"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-44"><img src="images/initialinput.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(a)</span><span class="space"> </span>Vertical lines before mapping</figcaption></figure></div>
-<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-45"><img src="images/singinneriter1.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(b)</span><span class="space"> </span>\(\Phi^n\) for \(n=1\)</figcaption></figure></div>
+<figure class="figure figure-like" id="figure-54"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-55"><img src="images/initialinput.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(a)</span><span class="space"> </span>Vertical lines before mapping</figcaption></figure></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-56"><img src="images/singinneriter1.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(b)</span><span class="space"> </span>\(\Phi^n\) for \(n=1\)</figcaption></figure></div>
 </div></div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-46"><img src="images/singinneriter2.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(c)</span><span class="space"> </span>\(\Phi^n\) for \(n=2\)</figcaption></figure></div>
-<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-47"><img src="images/singinneriter5.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(d)</span><span class="space"> </span>\(\Phi^n\) for \(n=5\)</figcaption></figure></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-57"><img src="images/singinneriter2.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(c)</span><span class="space"> </span>\(\Phi^n\) for \(n=2\)</figcaption></figure></div>
+<div class="sbspanel" style="width:50%;justify-content:flex-start;"><figure class="figure figure-like" id="figure-58"><img src="images/singinneriter5.png" style="width: 100%; height: auto;" alt=""><figcaption><span class="codenumber">(d)</span><span class="space"> </span>\(\Phi^n\) for \(n=5\)</figcaption></figure></div>
 </div></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.23<span class="period">.</span></span><span class="space"> </span>Iteration of \(\Phi\)</figcaption></figure></article></div></section></section></div></main>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.28<span class="period">.</span></span><span class="space"> </span>Iteration of \(\Phi\)</figcaption></figure></article></div></section></section></div></main>
 </div>
 </body>
 </html>

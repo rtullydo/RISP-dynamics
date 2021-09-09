@@ -128,7 +128,7 @@
         </titlepage>
 
         <abstract>
-                <p>This gallery of examples is intended to illustrate various behaviors of rational inner maps. Definitions and theorems are as found in the paper <xref provisional="RIFdyn"/>.</p>
+                <p>This gallery of examples is intended to illustrate various behaviors of rational inner maps. Definitions and theorems are as found in the paper <url href="https://arxiv.org/abs/2109.03437"/>.</p>
             </abstract>
     </frontmatter>
 
@@ -354,7 +354,7 @@
             </me>
             where we have <m>\phi_2(w) = w^2</m> in the second slot.</p>
 
-            <p>Even in this simple case, the behavior of <m>\Phi</m> is quite different from the related Example 2.1.
+            <p>Even in this simple case, the behavior of <m>\Phi</m> is quite different from the related Example 1.1.
             <figure>
                 <sbsgroup>
                 <sidebyside>
@@ -378,9 +378,78 @@
                 </figure></p>
             </example>
 
+            <example><title>RISP with <m>\Phi = (\phi, i w)</m></title>
+
+            <p>Consider the function <m>\Phi</m> with 
+            <me>
+            \Phi(z, w) = \left(-\frac{2 w z-w-z}{-w-z+2},i w\right),
+            </me>
+            where we have <m>\phi_2(w) = i w</m> in the second slot.</p>
+
+            <p>Again, the behavior of <m>\Phi</m> is quite different from the related Example 1.1.
+            <figure>
+                <sbsgroup>
+                <sidebyside>
+                <figure> <caption>Vertical lines before mapping</caption>
+                    <image source="images/initialinput.png"/>
+                </figure>
+                <figure> <caption><m>\Phi^n</m> for <m>n=1</m></caption>
+                    <image source="images/twotwoIwiter1.png"/>
+                </figure>
+                </sidebyside>
+                <sidebyside>
+                <figure> <caption><m>\Phi^n</m> for <m>n=2</m></caption>
+                    <image source="images/twotwoIwiter2.png"/>
+                </figure>
+                <figure> <caption><m>\Phi^n</m> for <m>n=5</m></caption>
+                    <image source="images/twotwoIwiter5.png"/>
+                </figure>
+                </sidebyside>
+                </sbsgroup>
+                <caption>Iteration of <m>\Phi</m></caption>
+                </figure></p>
+
+                <p>We can observe the periodic structure of the mapping via an animation, where each frame represents the image of that iteration.</p>
+
+                <figure>
+                    <image width="50%" source="images/rotw.gif"/>
+                    <caption>10 iterations of <m>\Phi</m></caption>
+                </figure>
+            </example>
+
         </subsection>
 
         <subsection><title>Other two-variable examples</title>
+
+        <example><title>Monomial mapping</title>
+
+        <p>Consider the function
+        <me>
+            \Phi(z, w) = \left(z^2w^3, z^5w^2 \right).
+        </me></p>
+                <figure>
+                <sbsgroup>
+                <sidebyside>
+                <figure> <caption>Vertical lines before mapping</caption>
+                    <image source="images/initialinput.png"/>
+                </figure>
+                <figure> <caption><m>\Phi^n</m> for <m>n=1</m></caption>
+                    <image source="images/monomialiter1.png"/>
+                </figure>
+                </sidebyside>
+                <sidebyside>
+                <figure> <caption><m>\Phi^n</m> for <m>n=2</m></caption>
+                    <image source="images/monomialiter2.png"/>
+                </figure>
+                <figure> <caption><m>\Phi^n</m> for <m>n=3</m></caption>
+                    <image source="images/monomialiter3.png"/>
+                </figure>
+                </sidebyside>
+                </sbsgroup>
+                <caption>Iteration of <m>\Phi</m></caption>
+                </figure>
+
+            </example>
 
         <example><title>Two variable Blaschke products</title>
 
